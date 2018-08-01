@@ -6,11 +6,11 @@
 
 /**
  *
- * @author Arhan
+ * @author Arhan Banerjee
  */
 import java.util.stream.*;
 import java.text.*;
-
+import java.awt.Color;
 public class calcu extends javax.swing.JFrame {
 
     /**
@@ -24,7 +24,11 @@ public class calcu extends javax.swing.JFrame {
     
     public calcu() {
         initComponents();
+        Color c = new Color(32, 67, 147);
+        getContentPane().setBackground(c);                                      // Setting the background color to navy blue
+        
         mort.setEnabled(true);
+        
         monthly.setEnabled(true);
         l1.setVisible(false);
         l2.setVisible(false);
@@ -37,14 +41,27 @@ public class calcu extends javax.swing.JFrame {
         amount.setVisible(false);
         mortamount.setVisible(false);
         years.setVisible(false);
-        rate.setVisible(false);
-        ma.setVisible(false);
+        rate.setVisible(false);                                                 // All of these are editing the states of the buttons when the application is first
+        ma.setVisible(false);                                                   // opened by making them visible (or not) and editing their colour
         yr.setVisible(false);
         ir.setVisible(false);
         calculate.setVisible(false);
         outputmonthly.setVisible(false);
         mo.setVisible(false);
         clear.setVisible(false);
+        plus.setBackground(Color.orange);
+        minus.setBackground(Color.orange);                                         
+        multiply.setBackground(Color.orange);
+        division.setBackground(Color.orange);
+        clearall.setBackground(Color.orange);
+        percent.setBackground(Color.orange);
+        root.setBackground(Color.orange);
+        enter.setBackground(Color.orange);
+        calculate.setBackground(Color.orange);
+        calcula.setBackground(Color.orange);
+        clear.setBackground(Color.orange);
+        monthly.setBackground(Color.orange);
+        mort.setBackground(Color.orange);
         
     }
 
@@ -193,6 +210,8 @@ public class calcu extends javax.swing.JFrame {
         });
 
         output.setEditable(false);
+        output.setBackground(new java.awt.Color(0, 0, 0));
+        output.setForeground(new java.awt.Color(255, 255, 255));
 
         plus.setText("+");
         plus.addActionListener(new java.awt.event.ActionListener() {
@@ -298,12 +317,19 @@ public class calcu extends javax.swing.JFrame {
 
         ir.setText("Annual Interest Rate (%)");
 
+        mortamount.setBackground(new java.awt.Color(0, 0, 0));
+        mortamount.setForeground(new java.awt.Color(255, 255, 255));
+
+        years.setBackground(new java.awt.Color(0, 0, 0));
+        years.setForeground(new java.awt.Color(255, 255, 255));
         years.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yearsActionPerformed(evt);
             }
         });
 
+        rate.setBackground(new java.awt.Color(0, 0, 0));
+        rate.setForeground(new java.awt.Color(255, 255, 255));
         rate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 rateActionPerformed(evt);
@@ -313,6 +339,8 @@ public class calcu extends javax.swing.JFrame {
         mo.setText("Monthly Amount");
 
         outputmonthly.setEditable(false);
+        outputmonthly.setBackground(new java.awt.Color(0, 0, 0));
+        outputmonthly.setForeground(new java.awt.Color(255, 255, 255));
 
         calculate.setText("Enter");
         calculate.addActionListener(new java.awt.event.ActionListener() {
@@ -327,6 +355,15 @@ public class calcu extends javax.swing.JFrame {
 
         l3.setText("Annual Interest Rate (%)");
 
+        monthlyamount.setBackground(new java.awt.Color(0, 0, 0));
+        monthlyamount.setForeground(new java.awt.Color(255, 255, 255));
+
+        totalyears.setBackground(new java.awt.Color(0, 0, 0));
+        totalyears.setForeground(new java.awt.Color(255, 255, 255));
+
+        annualint.setBackground(new java.awt.Color(0, 0, 0));
+        annualint.setForeground(new java.awt.Color(255, 255, 255));
+
         calcula.setText("Enter");
         calcula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -337,6 +374,8 @@ public class calcu extends javax.swing.JFrame {
         l4.setText("Mortgage Amount");
 
         amount.setEditable(false);
+        amount.setBackground(new java.awt.Color(0, 0, 0));
+        amount.setForeground(new java.awt.Color(255, 255, 255));
 
         clear.setText("Clear All");
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -393,13 +432,13 @@ public class calcu extends javax.swing.JFrame {
                                 .addComponent(division, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(one, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(four, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -407,9 +446,9 @@ public class calcu extends javax.swing.JFrame {
                                     .addComponent(three, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(six, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(eight, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(1, 1, 1)
@@ -601,9 +640,7 @@ public class calcu extends javax.swing.JFrame {
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
         // TODO add your handling code here:
         
-       // int clicked= Integer.parseInt(cnter.getText());              // How many times one is clicked
-       // clicked++;
-        //cnter.setText("" + clicked);
+   
         
         int plus= Integer.parseInt(pluscount.getText());
         int minus= Integer.parseInt(minuscount.getText());
@@ -622,10 +659,7 @@ public class calcu extends javax.swing.JFrame {
         }
         
         
-       // int ctr1= Integer.parseInt(count.getText());                // Stores number in array
-       // numbers[ctr1] = 1;
-       // ctr1++;
-       // count.setText("" + ctr1);
+    
         
     }//GEN-LAST:event_oneActionPerformed
 
@@ -724,13 +758,14 @@ public class calcu extends javax.swing.JFrame {
         
         int clicked= Integer.parseInt(ctr.getText());                   // How many one's were clicked
          
-        if (ctr11>=1)
+       
+        if (ctr11>=1)                                                   // Using the previous values to do the appropriate calculation
         {
             for (int i = 0; i<clicked; i++)
             {
                 indi =numbers[i];
                 sum = sum + indi;
-                output.setText("" + dp2.format(sum));
+                output.setText("" + dp2.format(sum));                  // Addition
             }
             
         }
@@ -738,7 +773,7 @@ public class calcu extends javax.swing.JFrame {
         {
             for (int i = 0; i<clicked; i++)
             {
-                indi =numbers[i];
+                indi =numbers[i];                                      // Subtraction
                 sum = (indi - sum);
                 output.setText("" + dp2.format(sum));
                 sum1 = Double.parseDouble(output.getText());
@@ -746,7 +781,7 @@ public class calcu extends javax.swing.JFrame {
                 output.setText("" + dp2.format(sum2));
             }
         }
-        else if (ctr22>=1)
+        else if (ctr22>=1)                                             // Multiplication
         {
             for (int i = 0; i<clicked; i++)
             {
@@ -755,7 +790,7 @@ public class calcu extends javax.swing.JFrame {
                 output.setText("" + dp2.format(summ));
             }
         }
-        else if (ctr222>=1)
+        else if (ctr222>=1)                                            // Division
         {
             if (ctr222<2)
             {
@@ -789,7 +824,7 @@ public class calcu extends javax.swing.JFrame {
             
         }
         int root= Integer.parseInt(rootnum.getText());
-        if (root>=1)
+        if (root>=1)                                                            // Square Rooting
         {
             double rootnumber = Double.parseDouble(output.getText());
             rootnumber = Math.sqrt(rootnumber);
@@ -808,15 +843,7 @@ public class calcu extends javax.swing.JFrame {
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
         // TODO add your handling code here:
         
-       /* int clicked= Integer.parseInt(cnter.getText());              // How many times two is clicked
-        clicked++;
-        cnter.setText("" + clicked);
-        
-        output.setText("2");
-        int ctr1= Integer.parseInt(count.getText());                // Stores number in array
-        numbers[ctr1] = 2;
-        ctr1++;
-        count.setText("" + ctr1);*/
+      
        
         int plus= Integer.parseInt(pluscount.getText());
         int minus= Integer.parseInt(minuscount.getText());
@@ -840,15 +867,7 @@ public class calcu extends javax.swing.JFrame {
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
         // TODO add your handling code here:
         
-       /* int clicked= Integer.parseInt(cnter.getText());              // How many times nine is clicked
-        clicked++;
-        cnter.setText("" + clicked);
-        
-        output.setText("9");
-        int ctr1= Integer.parseInt(count.getText());                // Stores number in array
-        numbers[ctr1] = 9;
-        ctr1++;
-        count.setText("" + ctr1);*/
+     
        
         int plus= Integer.parseInt(pluscount.getText());
         int minus= Integer.parseInt(minuscount.getText());
@@ -1143,7 +1162,7 @@ public class calcu extends javax.swing.JFrame {
         
         for (int i=0; i<100; i++)
         {
-            numbers[i] = 0;
+            numbers[i] = 0;                                     // Writes zero to all the numbers in the array
         }
         
     }//GEN-LAST:event_clearallActionPerformed
@@ -1205,7 +1224,7 @@ public class calcu extends javax.swing.JFrame {
         
         
         
-        double amnt = ((((secinterest)*(Math.pow(1 + secinterest, secyear)))/((Math.pow(1 + secinterest, secyear)) - 1))*mortgage);
+        double amnt = ((((secinterest)*(Math.pow(1 + secinterest, secyear)))/((Math.pow(1 + secinterest, secyear)) - 1))*mortgage);         // Using the Mortgage Interest Formula
         outputmonthly.setText("" + dp2.format(amnt));
     }//GEN-LAST:event_calculateActionPerformed
 
