@@ -8,7 +8,7 @@ This simple Java program combines a normal calculator with an optional mortgage 
 
 The mortgage calculator has the option of either outputting the monthly amount required or the total amount paid. This choice can be selected with a button on the application. Since the calculator works independantly, both of them can be used simultaneously for your needs.
 
-Feel free to download and use it for your own use. As always, any sugggestions are greatly appreciated!
+Feel free to download and use it for your own use. As always, any sugggestions are welcome and greatly appreciated!
 
 ## Images
 
